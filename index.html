@@ -27,3 +27,16 @@
 [A-Za-z ]: Requires the character following the first letter of the street name to be upper case, lower case, or be a space.
 +: Requires that the preceding upper/lower case or space character appears one or more times in the string.
  -->
+
+ <body>
+    <form>
+      <input type="text" required pattern="#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})">
+    </form>
+  </body>
+
+<!--   
+  Let’s break down the code used here:
+
+#: This matches the # character, which is always the first character in a hex color code.
+([a-fA-F0-9]{6}|[a-fA-F0-9]{3}): This uses the alternation operator | to account for the two possible hex color formats. 
+-->
